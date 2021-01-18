@@ -1,3 +1,32 @@
 body {
   background-color: #9399cb;
+  margin: 0;
+}
+
+article section {
+  border: 2px solid black;
+  text-align: center;
+  font-size: 25px;
+}
+
+.max-height {
+  height: 90vh;
+}
+
+.send_message {
+  position: absolute;
+  padding-bottom: 5px;
+  bottom: 0;
+}
+
+.send_message button {
+  border: 1px solid #198292;
+  background-color: #1bc3ddb7;
+  border-radius: 10px;
+}
+
+.send_message input {
+  width: 40vw;
+  border: 1px solid black;
+  border-radius: 8px;
 }

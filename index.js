@@ -16,5 +16,5 @@ function normalizaPort(val) {
 
 //Start ite
 app.listen(port, () => {
-  console.log("Make Chat Online!");
+  console.log(`Server running on port ${port}`);
 });

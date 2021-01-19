@@ -1,20 +1,25 @@
-<article class="row mt-1">
-  <section class="structure_table col-4">{{ user }}</section>
-  <section class="structure_table col-8">Name Chat</section>
+<article class="row mt-4">
+  <section class="structure_table nameTitle col-4">{{ user }}</section>
+  <section class="structure_table title col-8">Name Chat</section>
 </article>
 <article class="row">
-  <section class="structure_table col-4 max-height"></section>
-  <section class="structure_table col-8 max-height">
+  <section class="structure_table rooms col-4 max-height nopadding">
+    {{#each room}}
+      <button class="room btn btn-primary">{{name}}</button>    
+    {{/each}}
+  </section>
+  <section class="structure_table mainMessage nopadding col-8 max-height">
 
     {{#each array}}
-        <section class="display mt-2">
+        <section class="display padding mt-2">
             {{ nameuser }}: {{ text }}
             <span class="time-right">{{time time}}</span>
         </section>
     {{/each}}
-    <div class="send_message">
+    
+    <section class="send_message">
       <input type="text" />
       <button>Enviar</button>
-    </div>
+    </section>
   </section>
 </article>

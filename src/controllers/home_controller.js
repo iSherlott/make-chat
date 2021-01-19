@@ -1,4 +1,5 @@
-//Actions_collection
+const rooms = require("../helpers/rooms_helper");
+
 let typeArray = [
   {
     nameuser: "Sherlott",
@@ -35,12 +36,15 @@ exports.home = (req, res) => {
   });
 };
 
-exports.chat = (req, res) => {
+exports.chat = async (req, res) => {
+  const room = await rooms;
+
   res.render("chat", {
     user: req.body.user,
     style: "css/style.css",
     title: "Chat",
     array: typeArray,
     helpers: require("../helpers/if_handlebarsHelpers"),
+    room: room,
   });
 };
